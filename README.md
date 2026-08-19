@@ -85,6 +85,12 @@ Regra que nenhum gargalo pode cobrar é candidata a apagar, não a mudar de past
 
 [**CC BY 4.0**](LICENSE) — use, adapte e construa em cima, inclusive comercialmente, **dando crédito**.
 
+© 2026 Murilo F. Souza. Ao reusar, atribua a **Murilo F. Souza — Método de UX Research**, com link para
+este repo.
+
+*(O `LICENSE` é o texto canônico da CC, sem preâmbulo, para o GitHub identificar a licença em vez de
+marcá-la como "Other" — daí a atribuição morar aqui, que é o lugar dela.)*
+
 **Por que não MIT**, que é o do repo irmão: isto é prosa, não software. O texto do MIT fala de *"the
 Software"* e de garantia de adequação a um fim — vocabulário errado para um manual, e num repo cuja tese
 é que a palavra precisa ser exata isso não é detalhe. CC BY é o instrumento feito para obra escrita, e
