@@ -81,4 +81,19 @@ Regra que nenhum gargalo pode cobrar é candidata a apagar, não a mudar de past
 
 ---
 
+## Licença
+
+[**CC BY 4.0**](LICENSE) — use, adapte e construa em cima, inclusive comercialmente, **dando crédito**.
+
+**Por que não MIT**, que é o do repo irmão: isto é prosa, não software. O texto do MIT fala de *"the
+Software"* e de garantia de adequação a um fim — vocabulário errado para um manual, e num repo cuja tese
+é que a palavra precisa ser exata isso não é detalhe. CC BY é o instrumento feito para obra escrita, e
+**atribuição é o que se quer aqui**: referencie, adapte, discorde — com o crédito de onde veio.
+
+*(Nota para a Fase B: três páginas migram para o `llm-wiki-daedalus`, que é MIT. Não há conflito —
+autor único relicencia o próprio texto —, mas a escolha se declara no commit da migração em vez de se
+descobrir depois.)*
+
+---
+
 *Referenciado, nunca copiado.*
