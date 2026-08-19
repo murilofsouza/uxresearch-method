@@ -30,10 +30,10 @@ repos.
 ## ⚠️ Estado de transição — este repo carrega as duas metades
 
 Hoje ele tem **as nove páginas**, e três delas não são de UX Research: `estrutura-de-projeto`,
-`regra-de-chegada` e `fonte-canonica` são regras do **vault** e voltam para o repo público. A divisão
-por regra é a Fase B do `PLAN-006` (vault: `5. Work/Studio Visual/Método de Projeto/Plans/open/`), e
-ela espera o FIA e o Jornal da Orla fecharem — **desenhar a fronteira antes dos dois consumidores
-terminarem é adivinhar o que é invariante**, o mesmo argumento que já adiou o pacote e o gerador.
+`regra-de-chegada` e `fonte-canonica` são regras do **vault** e voltam para o repo do padrão. A divisão
+por regra é a Fase B do `PLAN-006`, e ela **espera os dois projetos consumidores fecharem** —
+desenhar a fronteira antes de eles terminarem é adivinhar o que é invariante, o mesmo argumento que já
+adiou o pacote e o gerador.
 
 **Isto está escrito porque a mistura é transitória, não deliberada.** Sem esta seção, a próxima sessão
 lê as nove páginas como decisão e a Fase B nunca acontece.
@@ -52,10 +52,13 @@ frente e a classificação é óbvia:
 Sem isso, a Fase B vira reler ~1.600 linhas frias adivinhando de quem é cada regra. Com isso, vira uma
 varredura de marcas.
 
-**2. O bug continua entrando sem nome, mesmo com o repo privado.** A regra vinha de o repo ser público,
-e a tentação agora é relaxar — mas **um terço destas páginas volta para o público na Fase B**. Nome de
-cliente escrito aqui hoje é sanitização retroativa depois, num corpus maior. A prova é a situação e o
-número — *"a contagem chegou a viver em 11 arquivos"* —, nunca o cliente, a cidade ou o concorrente.
+**2. O bug entra sem nome — este repo é público.** A prova é a situação e o número — *"a contagem chegou
+a viver em 11 arquivos"* —, nunca o cliente, a cidade ou o concorrente. Se o número não bastar para
+convencer, a regra não estava madura.
+
+E a regra vale **também para o que se escreve *sobre* o método** — mensagem de commit, corpo de PR,
+README. As nove páginas nasceram limpas por disciplina de quinze commits; o vazamento, quando veio, veio
+da prosa de bastidor escrita às pressas em volta delas, que ninguém trata como conteúdo publicado. Ela é.
 
 ---
 
