@@ -1,5 +1,5 @@
 # Verificação de entregável
-Updated: 2026-08-03
+Updated: 2026-08-25
 
 Como se **confere** um entregável construído — wireframe, protótipo, tela. Não é sobre a documentação
 nem sobre a camada do cliente: é o que a spec pode prometer e o que só a coisa construída responde.
@@ -10,10 +10,11 @@ método: valem para qualquer stack.
 > **O *como* medir é do stack** (subir o build, qual ferramenta) e mora na wiki do cliente. Aqui está
 > **o que** se mede, **o que invalida a medição** e **o que não se contorna**.
 
-**As quatro primeiras regras valem para qualquer coisa construída** — inclusive um layout que é o
-entregável final, sem produto depois. As duas últimas (discriminador, estado global) são de código: num
-projeto que entrega layout elas não têm alvo, e o que não tem alvo se remove. A página inteira **não se
-aplica** a projeto que termina em pesquisa e escopo — ver
+**Quase tudo aqui vale para qualquer coisa construída** — inclusive um layout que é o entregável
+final, sem produto depois. As exceções são **discriminador** e **estado global**, que são regras de
+código: num projeto que entrega layout elas não têm alvo, e o que não tem alvo se remove. *(A lista se
+nomeia, não se conta: "as quatro primeiras" apodrece na primeira regra que entra no meio.)* A página
+inteira **não se aplica** a projeto que termina em pesquisa e escopo — ver
 [SCHEMA](SCHEMA.md#o-que-vale-em-todo-projeto-e-o-que-depende-de-haver-construção).
 
 **Se o construído é descartável, isto continua valendo e a verificação de drift não.** Medir densidade
@@ -65,6 +66,57 @@ Corolário: **reticências ficam proibidas** (alinham destruindo informação) e
 caracteres no painel também** — briga com quem publica em dia de fechamento. Contador, se entrar, é
 orientação.
 
+**Se o produto já existe, o conteúdo de exemplo é o conteúdo publicado dele** — título real, foto
+real, comprimento real, na proporção real de tema. Inventar plausível quando o publicado está a uma
+leitura de distância troca a régua por uma estimativa, e é o publicado que o cliente reconhece na
+apresentação. Duas notas de campo: o que responde `403` para linha de comando costuma abrir num
+navegador de verdade, e imagem de lista quase sempre chega em atributo de *lazy load*, não no `src`.
+
+⚠️ **Mas conteúdo publicado carrega data, e data envelhece na peça.** Se o card não exibe data, a
+idade do texto não vaza e a escolha é livre; se exibe, ou o recorte é recente ou a peça mente. Confira
+qual dos dois é o caso **antes** de escolher os itens, não depois de preencher.
+
+## A resposta da ferramenta não é prova — a prova é a peça exportada
+
+> Dono: `UX`
+
+Preencher conteúdo **fora do navegador** — layout dirigido por automação numa ferramenta de design —
+tem uma classe de falha que a página construída não tem: a escrita **reporta sucesso e não muda nada**.
+Num único bloco de quatro cards, três formas apareceram na mesma sessão:
+
+- **texto exposto como propriedade do componente** não se escreve no nó de texto; e o inverso também é
+  verdade — texto que *não* é propriedade só aceita a escrita no nó. As duas trocadas retornam sucesso;
+- **preenchimento de imagem que não alcança filho de instância** — a imagem sobe, o identificador dela
+  volta preenchido, e a aplicação acontece em **zero nós**;
+- **variante que renderiza invisível** — rótulo branco em card branco: o conteúdo entrou, ninguém vê.
+
+**A regra:** depois de escrever, **exporte a peça e olhe**. Retorno de ferramenta, contagem de nós
+tocados e ausência de erro no console **não são prova de pixel** — é a mesma tese do critério de aceite
+que passa por inspeção e nunca por execução, um andar antes. Um bloco preenchido às cegas passa em
+qualquer revisão que só leia o log.
+
+**E rótulo invisível é variante, não conteúdo.** A tentação é corrigir a cor ali mesmo; o jeito de
+decidir sem inventar design é **copiar a peça irmã que a mesma tela já usa** — se um chip equivalente
+existe em outro bloco, a variante dele é a resposta, e a divergência entre os dois é que era o defeito.
+
+## Recorte sem interseção é regra de conteúdo — e não se herda de camada para camada
+
+> Dono: `UX`
+
+Quando duas peças da mesma tela bebem da mesma lista, o recorte de cada uma **não pode se cruzar**: sem
+isso a tela mostra o mesmo item duas vezes e a contagem de conteúdo infla. Isso já estava resolvido — e
+voltou a acontecer quando a mesma tela foi reconstruída na camada seguinte, porque a regra vivia num
+**comentário de código da camada descartável**. O comentário não viaja; o conteúdo, sim.
+
+O resultado passou por revisão: dois cards do mesmo bloco com **nome, chapéu, título e foto idênticos**,
+na tela que o cliente lê.
+
+**Onde a regra mora:** junto do conteúdo — no doc que lista o conteúdo de exemplo —, nunca só na
+camada que vai ser jogada fora
+([fases-e-agentes](fases-e-agentes.md#e-declare-se-o-construído-sobrevive-ao-projeto)).
+**Como se confere:** dois títulos iguais na mesma tela é defeito, e a varredura é literalmente essa. É
+mais barata que a revisão que a deixou passar.
+
 ## Variante que muda de forma por breakpoint não aparece no ASCII
 
 Um card que vira horizontal no mobile é **economia certa** numa faixa de 18 itens e **defeito** onde a
@@ -114,7 +166,9 @@ cada tela. Uma fonte, uma implementação da peça — e aí o critério vira co
 Antes de dar um entregável por conferido:
 
 - [ ] densidade medida no **construído**, no viewport do público, sem calibrar por padding
-- [ ] conteúdo de exemplo do domínio real
+- [ ] conteúdo de exemplo do domínio real — **o publicado, se o produto já existe**
+- [ ] nenhum item repetido entre dois blocos da mesma tela (dois títulos iguais é defeito)
+- [ ] o que foi preenchido por automação **conferido na peça exportada**, não no retorno da ferramenta
 - [ ] cada variante de breakpoint aberta na régua, não só no ASCII
 - [ ] nenhum componente novo entrou por causa de variante
 - [ ] nenhum discriminador com um valor só
