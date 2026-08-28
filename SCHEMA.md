@@ -32,9 +32,10 @@ projeto — e a mesma regra: quem abre uma página tem de conseguir ler ela inte
 | **O que a publicação verifica sozinha, e o que ela recusa publicar?** | [invariantes-de-publicacao](invariantes-de-publicacao.md) |
 | **Com que aparência o wireframe é construído?** | [pele-de-wireframe](pele-de-wireframe.md) — sem cor de marca; destaque é peso, tom e traço |
 | **Como se confere um wireframe / entregável?** | [verificacao-de-entregavel](verificacao-de-entregavel.md) |
+| **Preenchi conteúdo por automação, fora do navegador. Como sei que entrou?** | [verificacao-de-entregavel](verificacao-de-entregavel.md#a-resposta-da-ferramenta-não-é-prova--a-prova-é-a-peça-exportada) — a resposta da ferramenta não é prova |
 | **Quem faz cada fase, e com que profundidade?** | [fases-e-agentes](fases-e-agentes.md) |
 | **O cliente lê a documentação num site?** | [portal-de-documentacao](portal-de-documentacao.md) — **capacidade opcional** |
-| **O que é o padrão da wiki em si (ingest, query, lint)?** | [`guide.md`](../guide.md) · [`health-check.md`](../health-check.md) |
+| **O que é o padrão da wiki em si (ingest, query, lint)?** | [`guide.md`](https://github.com/murilofsouza/llm-wiki-daedalus/blob/main/guide.md) · [`health-check.md`](https://github.com/murilofsouza/llm-wiki-daedalus/blob/main/health-check.md) — no [`llm-wiki-daedalus`](https://github.com/murilofsouza/llm-wiki-daedalus), que é outro repo |
 
 ## Páginas
 
@@ -45,7 +46,7 @@ projeto — e a mesma regra: quem abre uma página tem de conseguir ler ela inte
 | [fonte-canonica](fonte-canonica.md) | a tabela de fonte única; como um número medido se propaga sem deixar cópia velha atrás; **de onde vem uma afirmação sobre o estado atual**, e o que fazer quando a fala do cliente contradiz a medição |
 | [hub-como-se-escreve](hub-como-se-escreve.md) | a camada do cliente: voz, o que fica, o que sai, e as três direções de verificação |
 | [invariantes-de-publicacao](invariantes-de-publicacao.md) | o que aborta a publicação, o que só avisa, e a régua para uma checagem entrar |
-| [verificacao-de-entregavel](verificacao-de-entregavel.md) | como se confere um wireframe: densidade, conteúdo de exemplo, variantes, critério de aceite exercitável, **o que trava a medição** |
+| [verificacao-de-entregavel](verificacao-de-entregavel.md) | como se confere um wireframe: densidade, conteúdo de exemplo (de onde vem, e o que **preenchê-lo fora do navegador** esconde), recorte sem interseção, variantes, critério de aceite exercitável, **o que trava a medição** |
 | [fases-e-agentes](fases-e-agentes.md) | fase → agente → fan-out, profundidade calibrada, rastreio por superfície |
 | [pele-de-wireframe](pele-de-wireframe.md) | a camada visual do wireframe: escala e tokens, tipografia e coluna de leitura, grade, o kit mínimo de peças, as armadilhas de camada — **capacidade opcional** |
 | [portal-de-documentacao](portal-de-documentacao.md) | a superfície onde o cliente lê: o que ela exige, as decisões de desenho, o contrato de config, **o que só o build de produção lê** e a direção de evolução |
@@ -56,7 +57,9 @@ projeto — e a mesma regra: quem abre uma página tem de conseguir ler ela inte
 - **Não é o estado de um projeto** — isso é o `roadmap`, e só ele.
 - **Não é a wiki de um cliente** — a wiki do cliente guarda `client` · `stack` · `conventions`
   (os gotchas *daquele* stack) e **linka** este método.
-- **Não é o padrão da wiki-curadora** — isso é [`guide.md`](../guide.md). Este método é o que se
+- **Não é o padrão da wiki-curadora** — isso é o
+  [`guide.md`](https://github.com/murilofsouza/llm-wiki-daedalus/blob/main/guide.md) do
+  [`llm-wiki-daedalus`](https://github.com/murilofsouza/llm-wiki-daedalus). Este método é o que se
   documenta; o guide é como a documentação se mantém enxuta.
 
 ## O que vale em todo projeto, e o que depende de haver construção
@@ -115,9 +118,10 @@ valor mora no projeto:
 - **`hub-sync` é pacote, nunca skill.** Ele aborta a publicação, no gargalo por onde todo conteúdo
   passa; skill é prosa e depende de leitura. A divisão que vale generalizar: o agente **escreve**, o
   sync **verifica**.
-- **Os `protocols/` deste repo são release, não espelho.** A fonte que roda e evolui é a instalação
-  do agente (`~/.claude/commands/`); o repo é atualizado em marco. Divergência com direção declarada
-  é versão; sem direção declarada é bug — e foi assim que as três cópias ficaram para trás.
+- **Os `protocols/` do [`llm-wiki-daedalus`](https://github.com/murilofsouza/llm-wiki-daedalus) são release, não
+  espelho.** A fonte que roda e evolui é a instalação do agente (`~/.claude/commands/`); o repo é
+  atualizado em marco. Divergência com direção declarada é versão; sem direção declarada é bug — e
+  foi assim que as três cópias ficaram para trás.
 
 ## As três regras que este padrão pagou para aprender
 
@@ -132,7 +136,7 @@ valor mora no projeto:
 
 1. [estrutura-de-projeto](estrutura-de-projeto.md) — cria as pastas e os três arquivos da raiz.
 2. Wiki no nível do **cliente**, `SCHEMA.md` primeiro, linkando este método (ver
-   [`protocols/wiki-setup.md`](../protocols/wiki-setup.md)).
+   [`protocols/wiki-setup.md`](https://github.com/murilofsouza/llm-wiki-daedalus/blob/main/protocols/wiki-setup.md)).
 3. [fases-e-agentes](fases-e-agentes.md) — calibra profundidade por frente e escreve o doc de método
    *do projeto* (só o que é dele: alvos, agentes, o que é 100%).
 4. [regra-de-chegada](regra-de-chegada.md) — cola as três perguntas no `SCHEMA` do cliente.
@@ -141,4 +145,4 @@ valor mora no projeto:
 
 ---
 
-← [README](../README.md) · [guide](../guide.md)
+← [README](README.md) · [guide](https://github.com/murilofsouza/llm-wiki-daedalus/blob/main/guide.md) (no `llm-wiki-daedalus`)
