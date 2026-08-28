@@ -1,5 +1,5 @@
 # Método de projeto — o mapa
-Updated: 2026-08-10
+Updated: 2026-08-28
 
 O **workflow de projeto**: como um projeto se organiza, por onde entra coisa nova, o que é fonte única,
 como o material do cliente fala e o que a publicação verifica sozinha.
@@ -30,6 +30,7 @@ projeto — e a mesma regra: quem abre uma página tem de conseguir ler ela inte
 | **O cliente disse o contrário do que a gente mediu. E agora?** | [fonte-canonica](fonte-canonica.md#e-quando-a-conversa-contradiz-a-medição-pergunte-quem-é-dono-do-fato) — pergunte quem é dono do fato, e proteja a próxima leitura no §Histórico |
 | **Como se escreve o material que o cliente lê?** | [hub-como-se-escreve](hub-como-se-escreve.md) — proposta única no presente |
 | **O que a publicação verifica sozinha, e o que ela recusa publicar?** | [invariantes-de-publicacao](invariantes-de-publicacao.md) |
+| **Com que aparência o wireframe é construído?** | [pele-de-wireframe](pele-de-wireframe.md) — sem cor de marca; destaque é peso, tom e traço |
 | **Como se confere um wireframe / entregável?** | [verificacao-de-entregavel](verificacao-de-entregavel.md) |
 | **Quem faz cada fase, e com que profundidade?** | [fases-e-agentes](fases-e-agentes.md) |
 | **O cliente lê a documentação num site?** | [portal-de-documentacao](portal-de-documentacao.md) — **capacidade opcional** |
@@ -46,6 +47,7 @@ projeto — e a mesma regra: quem abre uma página tem de conseguir ler ela inte
 | [invariantes-de-publicacao](invariantes-de-publicacao.md) | o que aborta a publicação, o que só avisa, e a régua para uma checagem entrar |
 | [verificacao-de-entregavel](verificacao-de-entregavel.md) | como se confere um wireframe: densidade, conteúdo de exemplo, variantes, critério de aceite exercitável, **o que trava a medição** |
 | [fases-e-agentes](fases-e-agentes.md) | fase → agente → fan-out, profundidade calibrada, rastreio por superfície |
+| [pele-de-wireframe](pele-de-wireframe.md) | a camada visual do wireframe: escala e tokens, tipografia e coluna de leitura, grade, o kit mínimo de peças, as armadilhas de camada — **capacidade opcional** |
 | [portal-de-documentacao](portal-de-documentacao.md) | a superfície onde o cliente lê: o que ela exige, as decisões de desenho, o contrato de config, **o que só o build de produção lê** e a direção de evolução |
 
 ## O que este método não é
@@ -68,6 +70,7 @@ outros vão até o ar. O método é o mesmo — o que muda é **quanto dele liga
 | [regra-de-chegada](regra-de-chegada.md) | o rastreio por superfície e a coluna de implementação ([fases-e-agentes](fases-e-agentes.md)) |
 | [fonte-canonica](fonte-canonica.md) | a direção de verificação **spec → código** ([hub-como-se-escreve](hub-como-se-escreve.md)) |
 | [hub-como-se-escreve](hub-como-se-escreve.md) + [invariantes-de-publicacao](invariantes-de-publicacao.md) — desde que exista camada publicada para o cliente | [portal-de-documentacao](portal-de-documentacao.md) — **só se o cliente lê a documentação num site**; quem entrega em documento ou apresenta em reunião não tem portal |
+| | [pele-de-wireframe](pele-de-wireframe.md) — só quando o projeto constrói wireframe ou layout |
 
 **Decida onde o projeto termina no começo**, e remova o que não se aplica com uma linha dizendo por quê.
 Verificação sem alvo é pior que verificação ausente: campo vazio a próxima varredura lê como pendência.
