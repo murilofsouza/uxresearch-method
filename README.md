@@ -29,14 +29,14 @@ repos.
 
 ## ⚠️ Estado de transição — este repo carrega as duas metades
 
-Hoje ele tem **as nove páginas**, e três delas não são de UX Research: `estrutura-de-projeto`,
+Hoje ele tem **as dez páginas**, e três delas não são de UX Research: `estrutura-de-projeto`,
 `regra-de-chegada` e `fonte-canonica` são regras do **vault** e voltam para o repo do padrão. A divisão
 por regra é a Fase B do `PLAN-006`, e ela **espera os dois projetos consumidores fecharem** —
 desenhar a fronteira antes de eles terminarem é adivinhar o que é invariante, o mesmo argumento que já
 adiou o pacote e o gerador.
 
 **Isto está escrito porque a mistura é transitória, não deliberada.** Sem esta seção, a próxima sessão
-lê as nove páginas como decisão e a Fase B nunca acontece.
+lê as dez páginas como decisão e a Fase B nunca acontece.
 
 ### Duas regras enquanto ele estiver assim
 
@@ -57,7 +57,7 @@ a viver em 11 arquivos"* —, nunca o cliente, a cidade ou o concorrente. Se o n
 convencer, a regra não estava madura.
 
 E a regra vale **também para o que se escreve *sobre* o método** — mensagem de commit, corpo de PR,
-README. As nove páginas nasceram limpas por disciplina de quinze commits; o vazamento, quando veio, veio
+README. As páginas nasceram limpas por disciplina de quinze commits; o vazamento, quando veio, veio
 da prosa de bastidor escrita às pressas em volta delas, que ninguém trata como conteúdo publicado. Ela é.
 
 ---
