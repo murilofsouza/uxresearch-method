@@ -1,5 +1,5 @@
 # Fases, agentes e rastreio
-Updated: 2026-08-03
+Updated: 2026-08-28
 
 Quem faz cada fase, com que profundidade, e como uma superfície é acompanhada da spec ao QA.
 
@@ -88,9 +88,12 @@ E o que **não** depende de haver implementação, em nenhum dos quatro casos: a
 regra de chegada, a fonte canônica, a voz da camada do cliente e as invariantes que protegem a
 publicação dela. É o núcleo do método — projeto de pesquisa pura tem as cinco.
 
-**Os agentes ficam definidos num lugar reutilizável** (`~/.claude/agents/` na implementação de
-referência), não dentro do projeto. Parametrizá-los para um domínio novo é trabalho declarado, não
-adaptação silenciosa — os agentes do primeiro projeto carregam o vocabulário dele.
+**Os agentes ficam definidos num lugar reutilizável — este repo, em [`claude/agents/`](claude/agents/)**
+(mudou em 28/08/2026: viviam na config pessoal da máquina, `~/.claude/agents/`, onde o time não os
+recebia e toda sessão os carregava sem usar). **Ao abrir um projeto de redesign, copie-os para o
+`.claude/agents/` do repo do cliente** — é o que os faz chegar pelo clone, junto com o resto do
+workflow. Parametrizá-los para um domínio novo é trabalho declarado, não adaptação silenciosa — os
+agentes do primeiro projeto carregam o vocabulário dele.
 
 ## O rastreio: uma linha por superfície
 
