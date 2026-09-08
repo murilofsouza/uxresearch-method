@@ -80,13 +80,16 @@ público diferentes; senão mantém flat.
     ├── {{Projeto}}.md  ← nota-projeto: uma linha por pasta
     ├── roadmap         ← fonte única da fase
     ├── PENDENCIAS      ← o que está aberto, com dono e o que trava
-    ├── Briefings/  Specs/  Plans/  Meetings/  Decisions/  Assets/
+    ├── Briefings/  Specs/  Tasks/  Meetings/  Decisions/  Assets/
     └── _arquivo/       ← com o motivo escrito
 ```
 
 **Nenhum doc solto na raiz do projeto além dos três** — cada um nasce na pasta certa, com frontmatter
-por tipo. `Specs/` é entregável de cliente; `Plans/` é como o trabalho foi feito (`open/`, `closed/`,
-`_INDEX`).
+por tipo. `Specs/` é entregável de cliente; `Tasks/` é como o trabalho foi feito — **um arquivo
+datado por mudança, sem contador**: `open/` é o estado, `closed/` é história imutável.
+
+🔴 **Sem `Tasks/_INDEX.md`.** O diretório já é o estado; um índice à mão seria a segunda cópia de
+`open/`, escrita por fora, que envelhece a cada abertura e a cada fechamento.
 
 Projeto maior acrescenta a camada numerada abaixo. Projeto pequeno para aqui, e isso é completo.
 
@@ -114,8 +117,12 @@ adapta é a regra de cima. Trocar `2 Experiência` por `2 Operação` é adapta�
 Não pertencem a fase nenhuma, então **não recebem número** — receber número seria mentir sobre ordem
 de leitura:
 
-`Decisions/` · `Meetings/` · `Plans/` · `Fontes/` (material bruto que entra) · `_arquivo/` ·
+`Decisions/` · `Meetings/` · `Tasks/` · `Fontes/` (material bruto que entra) · `_arquivo/` ·
 a camada publicada para o cliente.
+
+**Não pertencer a uma fase é sobre onde a pasta mora, não sobre o que ela pode citar.** Uma task
+declara a fase no frontmatter e o agrupamento sai daí, derivado — o que ela não faz é morar dentro
+da pasta numerada da fase.
 
 ## `_arquivo/` não é lixeira — arquivar exige escrever o motivo e o substituto
 
