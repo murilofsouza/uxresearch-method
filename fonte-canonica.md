@@ -76,7 +76,7 @@ O termo que mudou está, por definição, escrito de N formas ("a Home mede", "h
 Corrigir apenas os dois lugares que o achado nomeava deixou o número velho em **cinco outros** — a
 auditoria de SEO sozinha tinha **sete ocorrências**. O achado é a amostra, não a lista.
 
-**E varra todo doc vigente.** Poupe só o histórico: log, planos fechados, `_arquivo/`. Ali o número
+**E varra todo doc vigente.** Poupe só o histórico: log, tasks fechadas, `_arquivo/`. Ali o número
 velho é correto.
 
 ### 3. Número republicado tem cauda, e a cauda mora no mesmo arquivo
@@ -152,7 +152,7 @@ código por bloco de código): elas não sobrevivem à normalização e precisam
 **Backup do original antes, sempre** — a prova pode falhar, e aí você precisa do estado anterior, não de
 um `git checkout` que o vault não tem.
 
-**E poupe o histórico.** Não rode transformação em lote em `Plans/closed/` nem em `_arquivo/`: o valor
+**E poupe o histórico.** Não rode transformação em lote em `Tasks/closed/` nem em `_arquivo/`: o valor
 deles é **não terem mudado**, o ganho é zero (ninguém lê buscando renderização bonita) e o risco é
 danificar registro que não se regenera. É a mesma regra de [varredura](#2-achado-aponta-onde-dói-não-onde-termina)
 aplicada a edição mecânica.
