@@ -4,7 +4,7 @@
 > transição) → [`SCHEMA.md`](SCHEMA.md), que é o roteador das páginas → o resto sob demanda.
 >
 > A régua de engenharia e a camada dos projetos são cross-cliente e **não estão aqui**: elas vêm do
-> repo `studiovisual/claude-design-setup`, por `@import` no `~/.claude/CLAUDE.md` de cada pessoa.
+> repo `studiovisual/claude-design-workflow`, por `@import` no `~/.claude/CLAUDE.md` de cada pessoa.
 > Regra que reaparecer em texto aqui é duplicação, e a cópia é a que fica velha.
 
 ## O que este repo é — e o que ele não afirma
@@ -50,7 +50,7 @@ python3 scripts/lint-links.py
 Ele confere os links markdown relativos, as âncoras (o heading existe no destino?) e os wikilinks.
 Sai com `1` em qualquer achado, `0` limpo.
 
-🔴 **Ele NÃO é o `lint-links.py` do plugin design-setup, e a divergência é deliberada.** O template
+🔴 **Ele NÃO é o `lint-links.py` do plugin design-workflow, e a divergência é deliberada.** O template
 linta *wikilinks* sob `docs/`, cobra `_INDEX.md` por pasta e põe teto nas fontes únicas — este repo não
 tem nenhuma das três: as páginas moram na raiz, não há `_INDEX.md` por decisão (o roteador é o
 `SCHEMA.md`) e não há estado de projeto. Rodado aqui, **o template imprime verde tendo verificado zero

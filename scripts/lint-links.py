@@ -6,7 +6,7 @@ Rode da raiz do repo:  python3 scripts/lint-links.py
 Sai com 1 se houver link para arquivo que não existe, âncora para heading que
 não existe, ou wikilink que não resolve. Sai com 0 quando tudo resolve.
 
-⚠️ Este script NÃO é o template do plugin design-setup, e a divergência é
+⚠️ Este script NÃO é o template do plugin design-workflow, e a divergência é
 deliberada. O template linta *wikilinks* sob `docs/`, cobra `_INDEX.md` por
 pasta e põe teto nas três fontes únicas — este repo não tem nenhuma das três
 coisas: não tem `docs/` (as páginas moram na raiz), não tem `_INDEX.md` por
